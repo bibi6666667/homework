@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title> 🐧펭수 아슈크림🐧 | 부트스트랩 연습하기</title>
+
+    <style>
+        .wrap {
+            border: black solid;
+            width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .pengsoo_image {
+            margin: 30px;
+        }
+
+        .float {
+            float: left;
+        }
+    </style>
+    <script>
+        function order() {
+            alert('주문이 완료되었습니다!')
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <img class="pengsoo_image" src="https://post-phinf.pstatic.net/MjAyMDA3MDFfMjMx/MDAxNTkzNTcwODU3NjU3.nnmy2GIjYmeHBxtH54U9yfNiDmRZyKGuyIQlq7mfAwgg.RemeBHNInZ_VQi3axn4DXk0RID9RASP_PpEOyXdwvPsg.JPEG/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_%285%29.jpg?type=w1200"
+         alt="펭수 아슈크림 이미지" width="400">
+    <div>
+        <div class="float">
+            <h1>펭수 아슈크림</h1>
+        </div>
+        <p>
+             가격: 3,200원/개
+        </p>
+        <br>
+        <h5>"찾았다! 우주에서 제일 맛있는 펭수 아슈크림!"</h5>
+        <p>
+            배스킨라빈스의 2020년 7월 이 달의 맛!<br>
+            "펭수 아슈크림" (Pengsoo Choux Ice Cream)입니다.<br>
+            밀크초콜릿 & 커스터드향 아이스크림에, 슈크림 시럽과 다이제볼(초코볼)이 들어 있어요.<br>
+            달콤하고 부드러운 초콜릿&슈크림의 매력에 푹 빠져보세요~
+        </p>
+        <p>*펭수 아슈크림은 시즌 플레이버로, 생산한 재고분 소진시 자동으로 판매가 종료됩니다.</p>
+        <p>*재고 문의는 가까운 매장으로 부탁드립니다.</p>
+    </div>
+    <br>
+    <div>
+        <h1>주문하기</h1>
+        <p>주문자 성함: <input type="text"></p>
+        <p>주문 수량 :
+            <input type="number" placeholder="--수량을 입력하세요--">
+        </p>
+        <p>주문자 주소 : <input type="text" ></p>
+        <p>전화번호 : <input type="text"></p>
+    </div>
+
+    <button onclick="order()"
+                    type="button" class="btn btn-warning">펭수 아슈크림 주문하기!</button>
+</div>
+</body>
+
+</html>
+
