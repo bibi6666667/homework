@@ -5,7 +5,7 @@ app = Flask(__name__)
 from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
-db = client.dbhomework
+db = client.dbsparta
 
 
 ## HTML 화면 보여주기
@@ -19,26 +19,26 @@ def homework():
 def save_order():
 # 1.클라이언트->서버 주문내역 저장하기
     order_name = request.form['name']
-    order_number = request.form['numer']
+    order_number = request.form['number']
     order_address = request.form['address']
     order_phone = request.form['phone']
+    print(order_name, order_number, order_address, order_phone)
     doc = {
         'name' : order_name,
         'number' : order_number,
         'address' : order_address,
         'phone' : order_phone
     }
-    db.dbsparta.insert_one(doc)
-
-    return jsonify({'result': 'success'},{'msg':'주문이 서버로 전송되었습니다!'})
+    db.order.insert_one(doc)
+    return jsonify({'result': 'success','msg': '주문이 서버로 전송되었습니다!(POST)'})
 
 
 # 주문 목록보기(Read) API
 @app.route('/order', methods=['GET'])
 def view_orders():
 # 2.서버->클라이언트 주문내역 보내주기
-
-    return jsonify({'result': 'success', 'orders': orders})
+    orders = list(db.order.find({},{'_id': 0}))
+    return jsonify({'result': 'success', 'orders': orders, 'msg': '주문목록을 서버에서 불러왔습니다(GET)'})
 
 
 if __name__ == '__main__':
